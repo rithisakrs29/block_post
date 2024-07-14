@@ -2,7 +2,7 @@
 session_start();
 
 if (!isset($_SESSION['pass'])) {
-    header("location: login.php");
+    header("location: ../login.php");
     exit();
 }
 ?>
@@ -12,41 +12,38 @@ if (!isset($_SESSION['pass'])) {
 
 <head>
     <?php
-    include ("in/header.php");
+    include ("../in/header.php");
     ?>
     <title>Block Post</title>
 </head>
 
 <body>
     <?php
-        include ("in/navbar.php");
+        include ("../in/navbar.php");
     ?>
 
     <div class=" mt-3 mb-4">
         <div class="row">
             <!-- Section: Profile -->
-            <div class="col-md-4 d-none d-md-block">
-                <?php
-                    include ('component/profile.php')
-                ?>
+            <div class="col-md-3 d-none d-md-block">
+               
             </div>
             <!-- Section: Newsfeed -->
-            <div class="col-md-5 col-12 newsfeed-section">
+            <div class="col-md-6 col-12 newsfeed-section">
                 <?php
-                    include ("../users/component/newfeed.php")
+                    include ("../component/profile_by_id.php");
                 ?>
             </div>
 
             <!-- Section: Notifications -->
             <div class="col-md-3 d-none d-md-block">
                 <?php
-                    include ("../users/component/notification.php")
+                    include ("../component/notification.php")
                 ?>
             </div>
 
         </div>
     </div>
-
 
 </body>
 

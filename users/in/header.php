@@ -2,13 +2,71 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Block Post</title>
-  <link rel="stylesheet" href="style/bootstrap-5.3.3-dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="style/css/bootstrap.min.css">
-  <link rel="stylesheet" href="style/css/style.css">
-  <link rel="stylesheet" href="style/css/responsive.css">
-  <link rel="stylesheet" href="style/css/jquery.mCustomScrollbar.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-  <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+  <link rel="stylesheet" type="text/css" href="http://localhost:8080/bootstrap-5.3.3-dist/css/bootstrap.min.css">
+  <link href="http://localhost:8080/fontawesome-free-6.5.2-web/css/all.min.css" rel="stylesheet">
+  <script src="http://localhost:8080/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+
+  <style>
+      /* width */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 3px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 5px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: cyan; 
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: black; 
+}
+        body {
+          overflow-x: hidden;
+        }
+        .header {
+            background-color: #f8f9fa;
+            padding: 10px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header .logo {
+            height: 40px;
+        }
+        .header .nav-icons {
+            display: flex;
+            align-items: center;
+        }
+        .header .nav-icons a {
+            text-decoration: none;
+            color: #343a40;
+            margin-left: 15px;
+        }
+        .header .nav-icons a:hover {
+            color: #007bff;
+        }
+        .newsfeed-section {
+            overflow-y: auto;
+            max-height: calc(100vh - 60px); /* Adjust based on header height */
+        }
+        
+    </style>
+
+    <?php
+      include('db.php')
+    ?>
