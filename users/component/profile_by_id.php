@@ -36,11 +36,11 @@ LEFT JOIN posts ON users.id = posts.user_id WHERE users.id = $userid");
 
 
                     <div class="gap-3 mt-3 icons d-flex flex-row justify-content-center align-items-center">
-                        <span><i class="fa fa-twitter"></i></span>
-                        <span><i class="fa fa-facebook-f"></i></span>
-                        <span><i class="fa fa-instagram"></i></span>
-                        <span><i class="fa fa-linkedin"></i></span>
-                    </div>
+                <span><i class="fa-brands fa-x-twitter"></i></span>
+                <span><i class="fa-brands fa-facebook"></i></span>
+                <span><i class="fa-brands fa-instagram"></i></span>
+                <span><i class="fa-brands fa-linkedin"></i></i></span>
+            </div>
                     <div class="px-2 rounded mt-4 date">
                         <span class="join">Joined on <?= $create_date ?>
                         </span>
